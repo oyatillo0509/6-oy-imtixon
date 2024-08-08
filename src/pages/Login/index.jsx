@@ -32,16 +32,19 @@ function Login() {
     }
 
     try {
-      const response = await fetch("https://api.escuelajs.co/api/v1/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: emailRef.current.value,
-          password: passwordRef.current.value,
-        }),
-      });
+      const response = await fetch(
+        "https://api.escuelajs.co/api/v1/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: emailRef.current.value,
+            password: passwordRef.current.value,
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Login xato");
@@ -63,7 +66,6 @@ function Login() {
     <div className={styles.container}>
       <div className={styles.imageSection}>
         <img src="./images/bac.svg" alt="Lighthouse" className={styles.image} />
-        <p className={styles.photoCredit}>Photo by Alexandr Popadin</p>
       </div>
       <div className={styles.formSection}>
         <form autoComplete="off" className={styles.form} onSubmit={handleLogin}>
@@ -84,7 +86,7 @@ function Login() {
             placeholder="Enter password"
           />
           <div className={styles.options}>
-            <label>
+            <label className={styles.chek}>
               <input type="checkbox" />
               Remember
             </label>

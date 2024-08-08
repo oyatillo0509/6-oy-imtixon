@@ -79,7 +79,6 @@ function Register() {
     <div className={styles.container}>
       <div className={styles.imageSection}>
         <img src="./images/bac.svg" alt="Lighthouse" className={styles.image} />
-        <p className={styles.photoCredit}>Photo by Alexandr Popadin</p>
       </div>
       <div className={styles.formSection}>
         <form
